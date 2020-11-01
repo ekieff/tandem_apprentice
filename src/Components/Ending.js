@@ -1,12 +1,12 @@
+import Data from '../Apprentice_TandemFor400_Data.json'
+import {Link} from 'react-router-dom'
+
 function Ending (props){
-    function playagain(event){
-        event.preventDefault()
-        props.history.push({pathname:`/quiz/0`, score:0, rounds:0})
-    }
+
     return(
         <div>
             <h1>We've Reached the end!</h1>
-            <button onClick={playagain}>Play again?</button>
+            <p>Your final score was:{props.location.score}</p>
         </div>
     )
 }

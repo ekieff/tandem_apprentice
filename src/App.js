@@ -7,12 +7,18 @@ import Result from './Components/Result'
 import Data from './Apprentice_TandemFor400_Data.json'
 import Ending from './Components/Ending'
 //make a loop to create the random numbers we'll use for the rounds.
+
+
+
+
 function App() {
+  
+
   return (
     <Router>
       {/* add a navbar */}
       <Route exact path="/" render={(props) =>(
-        <Landing {...props} score='0' turns='0'/>
+        <Landing {...props} score='0' rounds='0' question={Data}/>
         )}
       />
       <Route exact path="/quiz/:id" render={(props) =>(
