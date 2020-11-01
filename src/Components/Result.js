@@ -10,6 +10,8 @@ function Result(props){
         <>
         <h1>Your Answer was:</h1>
         <p>{props.location.answer}</p>
+        <h1>The right answer was:</h1>
+        <p>{props.location.correct}</p>
         <h1>Your score is:</h1>
         <p>{props.location.score}</p>
         <h1>With</h1>

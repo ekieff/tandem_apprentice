@@ -10,6 +10,12 @@ The outline of this challenge was to build a trivia website utilizing the data s
 - The correct answer must be reavealed after a user has submitted their answer
 - A user can see the score they received at the end of the round
 
+### To Play
+- git clone this file
+- run npm install
+- run npm start
+This simple react app has everything you need to go right into game play.
+
 ### Planning
 Looking at this challenge I knew I would need to set up code that would:
 - parse json data
@@ -29,6 +35,7 @@ While free form, I think creating a plan helps me to drive my work.
 - Day One: create react app, wireframes, and comment code and functions
 - Day Two: complete game play
 - Day Three: make it pretty!
+
 
 
 

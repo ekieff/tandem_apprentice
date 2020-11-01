@@ -29,18 +29,18 @@ function Question(props){
             console.log(event.target.value)
             console.log(answer)
             event.preventDefault()
-            props.history.push({pathname:`/quiz/${next}/result`, answer:'right', score:props.location.score+1, rounds:props.location.rounds+1, question:props.location.question})
+            props.history.push({pathname:`/quiz/${next}/result`, answer:'right', score:props.location.score+1, rounds:props.location.rounds+1, question:props.location.question, correct:answer})
         }else if (event.target.value === answer && props.location.rounds===9){
             console.log(event.target.value)
             console.log(answer)
             event.preventDefault()
-            props.history.push({pathname:`/end`, answer:'right', score:props.location.score+1, rounds:props.location.rounds+1, question:props.location.question})
+            props.history.push({pathname:`/end`, answer:'right', score:props.location.score+1, rounds:props.location.rounds+1, question:props.location.question, correct:answer})
         }else if (event.target.value !== answer && props.location.rounds<9){
             event.preventDefault()
-            props.history.push({pathname:`/quiz/${next}/result`, answer:'wrong', score:props.location.score, rounds:props.location.rounds+1, question:props.location.question})
+            props.history.push({pathname:`/quiz/${next}/result`, answer:'wrong', score:props.location.score, rounds:props.location.rounds+1, question:props.location.question, correct:answer})
         }else if (event.target.value !== answer && props.location.rounds===9){
             event.preventDefault()
-            props.history.push({pathname:`/end`, answer:'wrong', score:props.location.score, rounds:props.location.rounds+1, question:props.location.question})
+            props.history.push({pathname:`/end`, answer:'wrong', score:props.location.score, rounds:props.location.rounds+1, question:props.location.question, correct:answer})
         }
     }
     
