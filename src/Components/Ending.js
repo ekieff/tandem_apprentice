@@ -1,5 +1,3 @@
-import Data from '../Apprentice_TandemFor400_Data.json'
-import {Link} from 'react-router-dom'
 
 function Ending (props){
 

@@ -3,9 +3,21 @@ function Question(props){
     console.log(props)
     const next = parseInt(props.match.params.id)+1
     const responses = props.location.question[props.match.params.id].incorrect + ',' +props.location.question[props.match.params.id].correct
-    const response = responses.split(',')
+    console.log(responses)
+    const array = []
+    function makeArray(){
+        var i = 0
+        for (i in props.location.question[props.match.params.id].incorrect)(
+            array.push(props.location.question[props.match.params.id].incorrect[i])
+        )
+        i=i+1
+        array.push(props.location.question[props.match.params.id].correct)
+        return array
+    }
+    makeArray()
+    console.log(array)
+    //cahnge response to be an array of responses
     const answer = props.location.question[props.match.params.id].correct
-    console.log(response)
     console.log(answer)
     console.log(props.location.score)
     console.log(props.location.rounds)
@@ -36,10 +48,10 @@ function Question(props){
     return(
         <div>
         <h1>{props.location.question[props.match.params.id].question}</h1>
-        {Object.keys(response).map((key) =>{
+        {Object.keys(array).map((key) =>{
             return (
-                <button onClick={choice} value={response[key]}>
-                    {response[key]}
+                <button onClick={choice} value={array[key]}>
+                    {array[key]}
                 </button>
             )
         })}

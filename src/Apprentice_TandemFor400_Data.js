@@ -1,4 +1,4 @@
-[
+export const data = [
     {
       "question": "What was Tandem's previous name?",
       "incorrect": ["Tandem", "Burger Shack", "Extraordinary Humans"],
